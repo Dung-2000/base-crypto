@@ -7,12 +7,12 @@ def myuuencode(plain):
         asc_plain += temp
 
     padLen = 24 - (len(asc_plain) % 24)
-    if padLen == 16:
+    if padLen == 16 or 8:
         #asc_plain += '00000001' * (padLen // 8)
-        asc_plain += '00000000' * (padLen // 8)
-    elif padLen == 8:
+        asc_plain += '0' * padLen
+    #elif padLen == 8:
         #asc_plain += '00000010' * (padLen // 8)
-        asc_plain += '00000000' * (padLen // 8)
+        #asc_plain += '00000000' * (padLen // 8)
     elif padLen == 24:
         pass
     else :
