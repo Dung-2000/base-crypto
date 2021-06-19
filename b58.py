@@ -20,5 +20,5 @@ def myb58encode(plain):
     return (''.join(reversed(out_str)))
 
 if __name__ == '__main__':
-    plain = 'Hellow'
+    plain = 'Hello'
     print(myb58encode(plain=plain))
